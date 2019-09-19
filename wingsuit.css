@@ -1,0 +1,438 @@
+﻿.wingsuit{
+	margin-bottom: 40px;
+	margin-top: 160px;
+}
+.wingsuit-menu {
+    width:100%;
+	height:32px;
+	margin-bottom: 40px
+}
+.wingsuit-menu ul{
+    max-width: 1080px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.wingsuit-menu li{
+	display:block;
+	float:left;
+	width:200px;
+}
+.wingsuit-menu a{
+	opacity:.6
+}
+.wingsuit-menu a span {
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    border: 1px solid #f1cf3b;
+    border-radius: 5px;
+    color: #333;
+}
+.wingsuit-menu li.active a,
+.wingsuit-menu a:hover{
+	opacity:1
+}
+.wingsuit-row{
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+.wingsuit-svg{
+	float:left;
+	width:60%
+}
+.wingsuit-colors{
+	float:left;
+	width:40%;
+	max-width: 550px;
+	padding-left:20px
+}
+.wingsuit-colors ul{
+	list-style: none;
+}
+.wingsuit-area:not(.wingsuit-row){
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.wingsuit-area>label{
+	max-width:50%
+}
+.wingsuit-area:not(.wingsuit-row)>ul{
+	display:inline-block;
+}
+.wingsuit-area>ul>li{
+	display:inline-block;
+	cursor:pointer;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	margin-left: 5px;
+}
+.wingsuit-area>ul.disabled{
+	opacity:.3
+}
+.wingsuit-area>ul.disabled>li{
+	cursor:default;
+}
+.wingsuit-area .active{
+	position: relative;
+	border:2px solid #000 !important
+}
+.wingsuit-area .active:after{
+	content:"✓";
+	color:#fff;
+	font-weight: 700;
+	position: absolute;
+	top: -3px;
+	left: 2px;
+}
+.wingsuit-svg .logo-svg{
+	margin:0 auto
+}
+.logo-svg,.wingsuit_logo,.hendles-color{
+	max-width: 460px;
+}
+.wingsuit_logo li,
+.hendles-color li{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.wingsuit-row select{
+	max-width:200px
+}
+.wingsuit-fields{
+	float:left;
+	width:70%
+}
+.wingsuit-human{
+	text-align:center;
+	float:left;
+	width:30%;
+	padding-left:20px
+}
+.wingsuit-human img{
+	max-width:500px;
+	max-height:500px
+}
+.wingsuit-field{
+	float: left;
+	margin-right: 10px;
+	max-width: 420px;
+    width: 100%;
+
+}
+}
+.wingsuit-form .wingsuit-field{
+	width:50%;
+	margin:0 0 10px;
+	padding:0 10px
+}
+.wingsuit-form .wingsuit-textarea{
+	margin-bottom:10px;
+	padding:0 10px;
+	overflow: hidden;
+	width: 100%;
+}
+.wingsuit-field input,
+.wingsuit-textarea textarea{
+	width:100%;
+}
+.suit-price{
+	font-family: "Fira Sans";
+	font-weight:700;
+}
+.wingsuit-checkout{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.wingsuit-area.fail,
+.wingsuit-field.fail,
+.wingsuit-textarea.fail{
+    color: red;
+}
+.wingsuit-row .addon>label{
+	cursor:pointer
+}
+.hint {
+    position: relative;
+}
+.wingsuit-human-descr{
+	min-height:72px;
+	max-width:280px
+}
+.hint::after {
+	cursor:pointer;
+    content: "?";
+    background-color: #f1cf3b;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    text-align: center;
+    line-height: 1.3;
+    color: #000;
+
+}
+.hint span {
+    display: none;
+    position: absolute;
+    width: 290px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #222;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    opacity: 0;
+	animation:hint .3s ease;
+	z-index: 9;
+}
+.hint span::after {
+    content: "";
+    border: 7px solid transparent;
+    position: absolute;
+    bottom: -14px;
+    border-top-color: #222;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.hint:hover span {
+    display: block;
+    opacity: 1;
+}
+.wingsuit-field .hint span{
+	left:auto;
+	width: 420px;
+	transform:unset
+}
+.wingsuit-field .hint span::after {
+	display:none
+}
+.wingsuit-discount{
+    background: #000000;
+    border: medium none;
+    color: #ffffff !important;
+    font-size: 14px;
+	margin-left: 10px;
+    padding:11px 15px !important;
+    width: 100% !important;
+    text-transform:uppercase; 
+	box-shadow: 0 0 0 0 rgb(0, 0, 0);
+	cursor: pointer;
+	-webkit-animation: pulse 1.25s infinite cubic-bezier(0.66,0,0,1);
+	-moz-animation: pulse 1.25s infinite cubic-bezier(0.66,0,0,1);
+	-ms-animation: pulse 1.25s infinite cubic-bezier(0.66,0,0,1);
+	animation: pulse 1.25s infinite cubic-bezier(0.66,0,0,1);
+}
+
+.wingsuit-discount:hover {
+  -webkit-animation: none;
+  -moz-animation: none;
+  -ms-animation: none;
+  animation: none;
+}
+
+@-webkit-keyframes pulse {
+  to {
+    box-shadow: 0 0 0 10px rgba(232,76,61,0);
+  }
+}
+
+@-moz-keyframes pulse {
+  to {
+    box-shadow: 0 0 0 10px rgba(232,76,61,0);
+  }
+}
+
+@-ms-keyframes pulse {
+  to {
+    box-shadow: 0 0 0 10px rgba(232,76,61,0);
+  }
+}
+
+@keyframes pulse {
+  to {
+    box-shadow: 0 0 0 10px rgba(232,76,61,0);
+  }
+}
+@keyframes hint {
+    0% {
+       opacity: 0;
+    }
+    100% {
+         opacity: 1;
+    }
+}
+/*.suitprice{
+	min-width: 100px;
+	position: fixed;
+	bottom: 0;
+	border: 1px solid #aaa;
+	background-color: #fff;
+	right: 80px;
+	padding: 10px 20px;
+	border-radius: 5px 5px 0 0;
+}*/
+@media screen and (max-width:1280px){
+	.wingsuit-colors,
+	.wingsuit-svg{
+		width:50%
+	}
+}
+@media screen and (max-width:1080px){
+	.wingsuit-colors,
+	.wingsuit-svg{
+		width:auto;
+		float:none;
+	}
+	.wingsuit-colors:not(.no-colors){
+		padding:20px 0 0;
+		margin:0 auto
+	}
+	.wingsuit-fields{
+		float:none;
+		width:100%
+	}
+	.wingsuit-human{
+		float:none;
+		width:100%;
+		padding:0
+	}
+	.sizes{
+		display: flex;
+		flex-direction: column;
+	}
+	.sizes .wingsuit-fields{
+		order:1
+	}
+	.wingsuit-menu ul{
+		display:block;
+		width:100%;
+		max-width:300px;
+		padding-right:20px;
+		position:absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: #fff;
+		border: 1px solid #eee;
+		padding: 5px 20px 5px 5px;
+		border-radius: 5px;
+	}
+	.wingsuit-menu ul:not(.open){
+		cursor:pointer;
+	}
+	.wingsuit-menu ul:not(.open)::after {
+		content: "";
+		border: 7px solid transparent;
+		border-top-color:#333;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-25%);
+		z-index: 9999;
+		right: 3px;
+	}
+	.wingsuit-menu li{
+		height:auto;
+		width:100%;
+		overflow: hidden;
+		margin-bottom: 2px;
+	}
+	.wingsuit-menu ul:not(.open) li:not(.active){
+		height: 0;
+	}
+	.wingsuit-menu a:hover {
+		opacity: 1;
+	}
+}
+@media screen and (min-width:561px){
+	.customizer{
+		padding-top:0!important
+	}
+}
+@media screen and (max-width:560px){
+	.wingsuit-area{
+		display:block!important
+	}
+	.wingsuit-area>label,
+	.wingsuit-area>ul{
+		max-width:unset;
+		display:block;
+		padding-left:0
+	}
+	.wingsuit-svg.fixed {
+		position: fixed;
+		top: 0;
+		padding:0 15px;
+		background-color: #fff;
+		z-index: 1;
+		width: 100%;
+		left: 0;
+	}
+	.wingsuit-svg.bottom-fixed {
+		position: absolute;
+	}
+	.wingsuit-row.sizes.fixed h3{
+		margin-bottom: 60vh;
+	}
+	.wingsuit-row.sizes.fixed .wingsuit-human {
+		position: fixed;
+		background-color: #fff;
+		z-index: 1;
+		top: 0;
+		height: 50vh;
+	}
+	.wingsuit-row.sizes.fixed .wingsuit-human img {
+		height: 100%;
+	}
+	h3.wingsuit-base-price{
+		margin-top:15px
+	}
+}
+@media screen and (max-width:460px){
+	.hint span::after {
+		display:none
+	}
+	.hint span{
+		left:auto;
+		width: 290px;
+		transform:unset
+	}
+	@keyframes hint {
+		0% {
+		   opacity: 0;
+		   left:0
+		}  
+		10% {
+		   left:auto
+		}
+		100% {
+		   opacity: 1;
+		   left:auto
+		}
+	}
+	.wingsuit_logo li,
+	.hendles-color li{
+		display:list-item
+	}
+	.wingsuit_logo,
+	.hendles-color{
+		height: 170px;
+	}
+	.wingsuit-form .wingsuit-field{
+		width:100%;
+	}
+	.wingsuit-field{
+		float:none
+	}
+	.wingsuit-field input,
+	.wingsuit-row select{
+		width:100%;
+		max-width:unset
+	}
+}
